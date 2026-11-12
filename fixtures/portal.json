@@ -1,0 +1,9 @@
+{
+  "title": "富文本门户的语义化录入与回读",
+  "local": true,
+  "roles": [
+    "人工使用者"
+  ],
+  "entry": "/",
+  "scenario": "editor-transfer"
+}
