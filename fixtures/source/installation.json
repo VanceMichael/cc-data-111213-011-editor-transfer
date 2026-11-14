@@ -1,0 +1,85 @@
+{
+  "title": "SYN-100 机柜安装说明",
+  "revision": 1,
+  "blocks": [
+    {
+      "id": "intro",
+      "type": "paragraph",
+      "runs": [
+        { "text": "本说明适用于 " },
+        { "text": "SYN-100 机柜", "emphasis": true },
+        { "text": " 的现场安装。完整接线定义见 " },
+        { "text": "安装手册第 4 章", "link": "https://partner.example.com/manual/syn-100#wiring" },
+        { "text": "。" }
+      ]
+    },
+    {
+      "id": "checks-intro",
+      "type": "paragraph",
+      "runs": [{ "text": "安装前请确认以下要点：" }]
+    },
+    {
+      "id": "checks",
+      "type": "list",
+      "ordered": false,
+      "items": [
+        { "runs": [{ "text": "确认包装完好。" }] },
+        {
+          "runs": [{ "text": "检查外壳无划伤。" }],
+          "childOrdered": false,
+          "children": [
+            { "runs": [{ "text": "记录序列号 " }, { "text": "SYN-100-0421", "emphasis": true }] }
+          ]
+        },
+        { "runs": [{ "text": "准备绝缘手套。" }] }
+      ]
+    },
+    {
+      "id": "power-warning",
+      "type": "warning",
+      "runs": [{ "text": "警告：接线前必须断开总电源，并等待 5 分钟放电。" }]
+    },
+    {
+      "id": "steps-intro",
+      "type": "paragraph",
+      "runs": [{ "text": "按以下顺序完成安装：" }]
+    },
+    {
+      "id": "steps",
+      "type": "list",
+      "ordered": true,
+      "items": [
+        { "runs": [{ "text": "关闭总电源，等待放电完成。" }] },
+        {
+          "runs": [{ "text": "拆下前面板。" }],
+          "children": [
+            { "runs": [{ "text": "将螺丝放入零件袋。" }] }
+          ]
+        },
+        { "runs": [{ "text": "检查密封条并固定机柜。" }] },
+        {
+          "runs": [
+            { "text": "按接线图接入电源，参考 " },
+            { "text": "接线图", "link": "https://partner.example.com/manual/syn-100#wiring" },
+            { "text": "。" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "torque-table",
+      "type": "table",
+      "caption": "端子扭矩表",
+      "rows": [
+        ["端子", "扭矩"],
+        ["M4", "1.2 N·m"],
+        ["M6", "2.5 N·m"]
+      ]
+    },
+    {
+      "id": "sign-off",
+      "type": "paragraph",
+      "runs": [{ "text": "完成后由现场负责人复核并签字。" }]
+    }
+  ]
+}

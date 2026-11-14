@@ -1,0 +1,36 @@
+{
+  "title": "SYN-100 机柜安装说明（节选）",
+  "revision": 1,
+  "blocks": [
+    {
+      "id": "intro",
+      "type": "paragraph",
+      "runs": [
+        { "text": "本说明适用于 " },
+        { "text": "SYN-100 机柜", "emphasis": true },
+        { "text": "，完整接线定义见 " },
+        { "text": "安装手册第 4 章", "link": "https://partner.example.com/manual/syn-100#wiring" },
+        { "text": "。" }
+      ]
+    },
+    {
+      "id": "checks",
+      "type": "list",
+      "ordered": false,
+      "items": [
+        { "runs": [{ "text": "确认包装完好。" }] },
+        {
+          "runs": [{ "text": "检查外壳无划伤。" }],
+          "children": [
+            { "runs": [{ "text": "记录序列号 " }, { "text": "SYN-100-0421", "emphasis": true }] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "power-warning",
+      "type": "warning",
+      "runs": [{ "text": "警告：接线前必须断开总电源。" }]
+    }
+  ]
+}

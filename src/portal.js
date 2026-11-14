@@ -4,6 +4,7 @@ import { randomUUID, createHash } from 'node:crypto';
 
 export async function startPortal(options = {}) {
   const state = JSON.parse(await readFile('fixtures/state.json', 'utf8'));
+  if (options.saveDelay != null) state.saveDelay = options.saveDelay;
   const sessions = new Map();
   const audit = [];
   const json = (response, value, status = 200) => {
