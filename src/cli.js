@@ -27,6 +27,18 @@ async function run() {
       const domain = await import('./domain.js');
       console.log(JSON.stringify(await domain.livePreview(), null, 2));
     } finally { await rm(temporary, { recursive: true, force: true }); }
-  } else { throw new Error('支持 inspect、capture、list、demo'); }
+    const { runDemo } = await import('./demo.js');
+    const { folder, report } = await runDemo({ directory: '.local/demo' });
+    console.log(JSON.stringify({ editorTransfer: report.summary, report: join(folder, 'report.html') }, null, 2));
+  } else if (command === 'transfer') {
+    const { runBrowserTransfer } = await import('./browser.js');
+    const sourceIndex = process.argv.indexOf('--source');
+    const source = sourceIndex >= 0 ? process.argv[sourceIndex + 1] : file;
+    console.log(JSON.stringify(await runBrowserTransfer({
+      source: source ? resolve(source) : undefined,
+      headed: process.argv.includes('--headed'),
+      blankDraft: process.argv.includes('--blank-draft')
+    }), null, 2));
+  } else { throw new Error('支持 inspect、capture、list、demo、transfer'); }
 }
 run().catch(error => { console.error(error.message); process.exitCode = 1; });
